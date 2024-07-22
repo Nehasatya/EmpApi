@@ -1,4 +1,4 @@
-package org.example.empbackendapi;
+package org.example.empbackendapi.entity;
 
 
 import jakarta.persistence.*;
@@ -9,7 +9,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="employees")
+@Table(name="employee")
 public class Employee {
 
     @Id

@@ -1,13 +1,21 @@
 package org.example.empbackendapi;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@SpringBootApplication
+@SpringBootApplication()
+@EnableJpaRepositories(basePackages = {"org.example.empbackendapi.repository"})
+//@EnableAutoConfiguration
 public class EmpBackendApiApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(EmpBackendApiApplication.class, args);
-	}
+    public static void main(String[] args) {
+//        System.out.println(org.hibernate.Version.getVersionString());
+        SpringApplication.run(EmpBackendApiApplication.class, args);
+
+    }
 
 }
